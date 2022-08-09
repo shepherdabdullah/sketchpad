@@ -5,11 +5,22 @@
     font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
+body {
+    background-image: url("space.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 .title {
     display: flex;
     justify-content: center;
     margin: 20px;
+}
+
+.title h1 {
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
+    border-radius: 2px;
 }
 
 .content {
@@ -23,14 +34,66 @@
     height: 600px;
     width: 600px;
     outline-style: solid;
+    outline-color: #DD5E89;
+    border-radius: 2px;
 }
 
 .canvas:hover {
-    cursor: pointer;
+    cursor: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="64" width="64"><text y="28" font-size="32">👻</text><path d="M0,2 L0,0 L2,0" fill="red" /></svg>'), auto;
 }
 
 .color-picker-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 20px;
+    color: #DD5E89;
+    text-align: center;
+}
+
+.picker-label {
+    margin: 5px;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 0.3em 1.2em;
+    text-align: center;
+    transition: all 0.2s;
+    border-radius: 2px;
+    border-color: #DD5E89;
+    outline-style: solid;
+    outline-color: black;
+    margin: 1rem;
+    transition: all 0.5s ease;
+    transform: scale(1);
+    transition: 0.5s;
+    color: #FFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+    filter: brightness(120%);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.slider-label {
+    text-align: center;
+    color: #DD5E89;
 }
