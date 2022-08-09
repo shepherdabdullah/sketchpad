@@ -1,6 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+
 .title {
     display: flex;
     justify-content: center;
+    margin: 20px;
 }
 
 .content {
@@ -10,8 +19,18 @@
 }
 
 .canvas {
-    width: 600px;
-    height: 600px;
     display: grid;
-    outline-color: blue;
+    height: 600px;
+    width: 600px;
+    outline-style: solid;
+}
+
+.canvas:hover {
+    cursor: pointer;
+}
+
+.color-picker-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
