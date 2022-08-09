@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="flex-container">
-        <div class="title"><h1>Abdull-A-Sketch</h1></div>
+    <div class="container">
+        <div class="title"><h1>THE DICK DRAWER !3000!</h1></div>
         <div class="content">
-            <div class="canvas"></div>
+            
+            <div class="canvas-container">
+                <div class="canvas"></div>
+            </div>
+
+            <div class="color-picker-container">
+                <input type="color" class="color-picker" value="black" />
+            </div>
+
             <div class="buttons">
                 <button onclick="changeColor('black')">Black</button>
                 <button onclick="changeColor('white')">Eraser</button>
@@ -19,16 +27,14 @@
                 <button onclick="changeColor('random')">Random</button>
                 <button onclick="clearCanvas()">Clear</button>
             </div>
-            <div>
-                <input type="text" placeholder="Canvas Size" value="16" onchange="changeSize(this.value)"/>
-                <button>Set Size</button>
+
+            <div class="slide-container">
+                <label class="slider-label" for="slider">50 x 50</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="slider">
             </div>
+
         </div>
     </div>
-
-
-
-
     <script src="script.js"></script>
 </body>
 </html>
